@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		327AFFAEC4C9712E0E2456D8 /* Pods_TiendeoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AB1B71F9BBEA5341245D1E /* Pods_TiendeoTest.framework */; };
+		3BB812463C67FEE7F8F39A5A /* Pods_TiendeoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F53CBF5FFA7F9BA19839E9 /* Pods_TiendeoTestTests.framework */; };
+		B212928421E2531900C24FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212928321E2531900C24FB4 /* AppDelegate.swift */; };
+		B212928B21E2531B00C24FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212928A21E2531B00C24FB4 /* Assets.xcassets */; };
+		B212928E21E2531B00C24FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212928C21E2531B00C24FB4 /* LaunchScreen.storyboard */; };
+		B212929921E2531B00C24FB4 /* TiendeoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212929821E2531B00C24FB4 /* TiendeoTestTests.swift */; };
+		B21292A421E2531B00C24FB4 /* TiendeoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292A321E2531B00C24FB4 /* TiendeoTestUITests.swift */; };
+		B21292B921E254B800C24FB4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B321E254B800C24FB4 /* HomePresenter.swift */; };
+		B21292BA21E254B800C24FB4 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B421E254B800C24FB4 /* HomeRouter.swift */; };
+		B21292BB21E254B800C24FB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B521E254B800C24FB4 /* HomeViewController.swift */; };
+		B21292BD21E254B800C24FB4 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B721E254B800C24FB4 /* HomeInteractor.swift */; };
+		B21292C121E255C000C24FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21292BF21E255C000C24FB4 /* Main.storyboard */; };
+		B21292C321E2560200C24FB4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292C221E2560200C24FB4 /* Constants.swift */; };
+		B21292C621E2657B00C24FB4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292C521E2657B00C24FB4 /* HomeCollectionViewCell.swift */; };
+		B21292CB21E2751100C24FB4 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */; };
+		B224BC4A21E54477007C72EB /* HomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224BC4921E54477007C72EB /* HomeCollectionReusableView.swift */; };
+		B224BC4D21E54863007C72EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B224BC4B21E54863007C72EB /* Localizable.strings */; };
+		B224BC4F21E548C1007C72EB /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224BC4E21E548C1007C72EB /* String+Localize.swift */; };
+		B22DED8721E93686006C3EED /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B621E254B800C24FB4 /* HomeProtocols.swift */; };
+		B22DED8921E93984006C3EED /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DED8821E93984006C3EED /* Date+Format.swift */; };
+		B278A54E21E7E8D7008C1FC3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A54D21E7E8D7008C1FC3 /* API.swift */; };
+		B278A55121E7E9F1008C1FC3 /* CouponModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55021E7E9F1008C1FC3 /* CouponModel.swift */; };
+		B278A55321E7EA1E008C1FC3 /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55221E7EA1E008C1FC3 /* OfferModel.swift */; };
+		B278A55521E7EAFA008C1FC3 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55421E7EAFA008C1FC3 /* StoreModel.swift */; };
+		B278A55721E7EBB6008C1FC3 /* CouponButtonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55621E7EBB6008C1FC3 /* CouponButtonsModel.swift */; };
+		B278A55A21E7F7E3008C1FC3 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */; };
+		B621ABE07F8D67BB1EC8D830 /* Pods_TiendeoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B212929521E2531B00C24FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B212927821E2531900C24FB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B212927F21E2531900C24FB4;
+			remoteInfo = TiendeoTest;
+		};
+		B21292A021E2531B00C24FB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B212927821E2531900C24FB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B212927F21E2531900C24FB4;
+			remoteInfo = TiendeoTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F79BB1E7C6CA3C74D23BE3 /* Pods-TiendeoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestUITests/Pods-TiendeoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		167B1146818CB200AEEA4DBE /* Pods-TiendeoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestTests/Pods-TiendeoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FA45BA53C90F7D2FB99EB21 /* Pods-TiendeoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTest/Pods-TiendeoTest.release.xcconfig"; sourceTree = "<group>"; };
+		7AFC440105D758B1BE0A4729 /* Pods-TiendeoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestTests/Pods-TiendeoTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		890E6A7DF345861EA7B7D20D /* Pods-TiendeoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTest/Pods-TiendeoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		A8AB1B71F9BBEA5341245D1E /* Pods_TiendeoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B212928021E2531900C24FB4 /* TiendeoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiendeoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B212928321E2531900C24FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B212928A21E2531B00C24FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B212928D21E2531B00C24FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B212928F21E2531B00C24FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B212929421E2531B00C24FB4 /* TiendeoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiendeoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B212929821E2531B00C24FB4 /* TiendeoTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiendeoTestTests.swift; sourceTree = "<group>"; };
+		B212929A21E2531B00C24FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B212929F21E2531B00C24FB4 /* TiendeoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiendeoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21292A321E2531B00C24FB4 /* TiendeoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiendeoTestUITests.swift; sourceTree = "<group>"; };
+		B21292A521E2531B00C24FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21292B321E254B800C24FB4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B21292B421E254B800C24FB4 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B21292B521E254B800C24FB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B21292B621E254B800C24FB4 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		B21292B721E254B800C24FB4 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		B21292C021E255C000C24FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B21292C221E2560200C24FB4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B21292C521E2657B00C24FB4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		B224BC4921E54477007C72EB /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		B224BC4C21E54863007C72EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B224BC4E21E548C1007C72EB /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
+		B22DED8821E93984006C3EED /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		B278A54D21E7E8D7008C1FC3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B278A55021E7E9F1008C1FC3 /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
+		B278A55221E7EA1E008C1FC3 /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		B278A55421E7EAFA008C1FC3 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		B278A55621E7EBB6008C1FC3 /* CouponButtonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponButtonsModel.swift; sourceTree = "<group>"; };
+		B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
+		B6BFD7AC29F619F22EA5D7FA /* Pods-TiendeoTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestUITests/Pods-TiendeoTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1F53CBF5FFA7F9BA19839E9 /* Pods_TiendeoTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B212927D21E2531900C24FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327AFFAEC4C9712E0E2456D8 /* Pods_TiendeoTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929121E2531B00C24FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB812463C67FEE7F8F39A5A /* Pods_TiendeoTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929C21E2531B00C24FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B621ABE07F8D67BB1EC8D830 /* Pods_TiendeoTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A09FE116604F9C2CAC97FD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				890E6A7DF345861EA7B7D20D /* Pods-TiendeoTest.debug.xcconfig */,
+				4FA45BA53C90F7D2FB99EB21 /* Pods-TiendeoTest.release.xcconfig */,
+				167B1146818CB200AEEA4DBE /* Pods-TiendeoTestTests.debug.xcconfig */,
+				7AFC440105D758B1BE0A4729 /* Pods-TiendeoTestTests.release.xcconfig */,
+				B6BFD7AC29F619F22EA5D7FA /* Pods-TiendeoTestUITests.debug.xcconfig */,
+				07F79BB1E7C6CA3C74D23BE3 /* Pods-TiendeoTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B212927721E2531900C24FB4 = {
+			isa = PBXGroup;
+			children = (
+				B212928221E2531900C24FB4 /* TiendeoTest */,
+				B212929721E2531B00C24FB4 /* TiendeoTestTests */,
+				B21292A221E2531B00C24FB4 /* TiendeoTestUITests */,
+				B212928121E2531900C24FB4 /* Products */,
+				0A09FE116604F9C2CAC97FD6 /* Pods */,
+				B2D6233E5E24E8A625DB4309 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B212928121E2531900C24FB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B212928021E2531900C24FB4 /* TiendeoTest.app */,
+				B212929421E2531B00C24FB4 /* TiendeoTestTests.xctest */,
+				B212929F21E2531B00C24FB4 /* TiendeoTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B212928221E2531900C24FB4 /* TiendeoTest */ = {
+			isa = PBXGroup;
+			children = (
+				B278A55821E7F7D2008C1FC3 /* Managers */,
+				B21292C921E274FA00C24FB4 /* Extensions */,
+				B21292C421E2656300C24FB4 /* Cells */,
+				B224BC4821E5445A007C72EB /* SuplementaryViews */,
+				B278A54F21E7E9D2008C1FC3 /* Model */,
+				B21292B121E2549200C24FB4 /* Modules */,
+				B278A54C21E7E8BD008C1FC3 /* Network */,
+				B212928321E2531900C24FB4 /* AppDelegate.swift */,
+				B21292C221E2560200C24FB4 /* Constants.swift */,
+				B212928A21E2531B00C24FB4 /* Assets.xcassets */,
+				B21292BF21E255C000C24FB4 /* Main.storyboard */,
+				B212928C21E2531B00C24FB4 /* LaunchScreen.storyboard */,
+				B212928F21E2531B00C24FB4 /* Info.plist */,
+				B224BC4B21E54863007C72EB /* Localizable.strings */,
+			);
+			path = TiendeoTest;
+			sourceTree = "<group>";
+		};
+		B212929721E2531B00C24FB4 /* TiendeoTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B212929821E2531B00C24FB4 /* TiendeoTestTests.swift */,
+				B212929A21E2531B00C24FB4 /* Info.plist */,
+			);
+			path = TiendeoTestTests;
+			sourceTree = "<group>";
+		};
+		B21292A221E2531B00C24FB4 /* TiendeoTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B21292A321E2531B00C24FB4 /* TiendeoTestUITests.swift */,
+				B21292A521E2531B00C24FB4 /* Info.plist */,
+			);
+			path = TiendeoTestUITests;
+			sourceTree = "<group>";
+		};
+		B21292B121E2549200C24FB4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B21292B221E254A500C24FB4 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B21292B221E254A500C24FB4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21292B321E254B800C24FB4 /* HomePresenter.swift */,
+				B21292B421E254B800C24FB4 /* HomeRouter.swift */,
+				B21292B521E254B800C24FB4 /* HomeViewController.swift */,
+				B21292B621E254B800C24FB4 /* HomeProtocols.swift */,
+				B21292B721E254B800C24FB4 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B21292C421E2656300C24FB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B21292C521E2657B00C24FB4 /* HomeCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B21292C921E274FA00C24FB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */,
+				B224BC4E21E548C1007C72EB /* String+Localize.swift */,
+				B22DED8821E93984006C3EED /* Date+Format.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B224BC4821E5445A007C72EB /* SuplementaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				B224BC4921E54477007C72EB /* HomeCollectionReusableView.swift */,
+			);
+			path = SuplementaryViews;
+			sourceTree = "<group>";
+		};
+		B278A54C21E7E8BD008C1FC3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B278A54D21E7E8D7008C1FC3 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B278A54F21E7E9D2008C1FC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B278A55221E7EA1E008C1FC3 /* OfferModel.swift */,
+				B278A55021E7E9F1008C1FC3 /* CouponModel.swift */,
+				B278A55621E7EBB6008C1FC3 /* CouponButtonsModel.swift */,
+				B278A55421E7EAFA008C1FC3 /* StoreModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B278A55821E7F7D2008C1FC3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B2D6233E5E24E8A625DB4309 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8AB1B71F9BBEA5341245D1E /* Pods_TiendeoTest.framework */,
+				C1F53CBF5FFA7F9BA19839E9 /* Pods_TiendeoTestTests.framework */,
+				BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B212927F21E2531900C24FB4 /* TiendeoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21292A821E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTest" */;
+			buildPhases = (
+				B3A535640449D72D98DD3D0B /* [CP] Check Pods Manifest.lock */,
+				B212927C21E2531900C24FB4 /* Sources */,
+				B212927D21E2531900C24FB4 /* Frameworks */,
+				B212927E21E2531900C24FB4 /* Resources */,
+				2752C3EE2066C75F401495DE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiendeoTest;
+			productName = TiendeoTest;
+			productReference = B212928021E2531900C24FB4 /* TiendeoTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B212929321E2531B00C24FB4 /* TiendeoTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21292AB21E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTestTests" */;
+			buildPhases = (
+				0A04B7572FA39F8B29E458CF /* [CP] Check Pods Manifest.lock */,
+				B212929021E2531B00C24FB4 /* Sources */,
+				B212929121E2531B00C24FB4 /* Frameworks */,
+				B212929221E2531B00C24FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B212929621E2531B00C24FB4 /* PBXTargetDependency */,
+			);
+			name = TiendeoTestTests;
+			productName = TiendeoTestTests;
+			productReference = B212929421E2531B00C24FB4 /* TiendeoTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B212929E21E2531B00C24FB4 /* TiendeoTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21292AE21E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTestUITests" */;
+			buildPhases = (
+				AA395F61247C31AE98642CF4 /* [CP] Check Pods Manifest.lock */,
+				B212929B21E2531B00C24FB4 /* Sources */,
+				B212929C21E2531B00C24FB4 /* Frameworks */,
+				B212929D21E2531B00C24FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B21292A121E2531B00C24FB4 /* PBXTargetDependency */,
+			);
+			name = TiendeoTestUITests;
+			productName = TiendeoTestUITests;
+			productReference = B212929F21E2531B00C24FB4 /* TiendeoTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B212927821E2531900C24FB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = JSolec;
+				TargetAttributes = {
+					B212927F21E2531900C24FB4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B212929321E2531B00C24FB4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B212927F21E2531900C24FB4;
+					};
+					B212929E21E2531B00C24FB4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B212927F21E2531900C24FB4;
+					};
+				};
+			};
+			buildConfigurationList = B212927B21E2531900C24FB4 /* Build configuration list for PBXProject "TiendeoTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B212927721E2531900C24FB4;
+			productRefGroup = B212928121E2531900C24FB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B212927F21E2531900C24FB4 /* TiendeoTest */,
+				B212929321E2531B00C24FB4 /* TiendeoTestTests */,
+				B212929E21E2531B00C24FB4 /* TiendeoTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B212927E21E2531900C24FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21292C121E255C000C24FB4 /* Main.storyboard in Resources */,
+				B224BC4D21E54863007C72EB /* Localizable.strings in Resources */,
+				B212928E21E2531B00C24FB4 /* LaunchScreen.storyboard in Resources */,
+				B212928B21E2531B00C24FB4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929221E2531B00C24FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929D21E2531B00C24FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A04B7572FA39F8B29E458CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiendeoTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2752C3EE2066C75F401495DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TiendeoTest/Pods-TiendeoTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TiendeoTest/Pods-TiendeoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA395F61247C31AE98642CF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiendeoTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A535640449D72D98DD3D0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiendeoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B212927C21E2531900C24FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22DED8921E93984006C3EED /* Date+Format.swift in Sources */,
+				B212928421E2531900C24FB4 /* AppDelegate.swift in Sources */,
+				B278A55721E7EBB6008C1FC3 /* CouponButtonsModel.swift in Sources */,
+				B21292BA21E254B800C24FB4 /* HomeRouter.swift in Sources */,
+				B21292CB21E2751100C24FB4 /* UIColor+Theme.swift in Sources */,
+				B224BC4A21E54477007C72EB /* HomeCollectionReusableView.swift in Sources */,
+				B224BC4F21E548C1007C72EB /* String+Localize.swift in Sources */,
+				B278A55121E7E9F1008C1FC3 /* CouponModel.swift in Sources */,
+				B21292BD21E254B800C24FB4 /* HomeInteractor.swift in Sources */,
+				B21292C621E2657B00C24FB4 /* HomeCollectionViewCell.swift in Sources */,
+				B278A55A21E7F7E3008C1FC3 /* AlertsManager.swift in Sources */,
+				B21292C321E2560200C24FB4 /* Constants.swift in Sources */,
+				B21292B921E254B800C24FB4 /* HomePresenter.swift in Sources */,
+				B278A55321E7EA1E008C1FC3 /* OfferModel.swift in Sources */,
+				B278A54E21E7E8D7008C1FC3 /* API.swift in Sources */,
+				B21292BB21E254B800C24FB4 /* HomeViewController.swift in Sources */,
+				B22DED8721E93686006C3EED /* HomeProtocols.swift in Sources */,
+				B278A55521E7EAFA008C1FC3 /* StoreModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929021E2531B00C24FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B212929921E2531B00C24FB4 /* TiendeoTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B212929B21E2531B00C24FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21292A421E2531B00C24FB4 /* TiendeoTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B212929621E2531B00C24FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B212927F21E2531900C24FB4 /* TiendeoTest */;
+			targetProxy = B212929521E2531B00C24FB4 /* PBXContainerItemProxy */;
+		};
+		B21292A121E2531B00C24FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B212927F21E2531900C24FB4 /* TiendeoTest */;
+			targetProxy = B21292A021E2531B00C24FB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B212928C21E2531B00C24FB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B212928D21E2531B00C24FB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B21292BF21E255C000C24FB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B21292C021E255C000C24FB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B224BC4B21E54863007C72EB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B224BC4C21E54863007C72EB /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B21292A621E2531B00C24FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B21292A721E2531B00C24FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B21292A921E2531B00C24FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 890E6A7DF345861EA7B7D20D /* Pods-TiendeoTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B21292AA21E2531B00C24FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FA45BA53C90F7D2FB99EB21 /* Pods-TiendeoTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B21292AC21E2531B00C24FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 167B1146818CB200AEEA4DBE /* Pods-TiendeoTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TiendeoTest.app/TiendeoTest";
+			};
+			name = Debug;
+		};
+		B21292AD21E2531B00C24FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFC440105D758B1BE0A4729 /* Pods-TiendeoTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TiendeoTest.app/TiendeoTest";
+			};
+			name = Release;
+		};
+		B21292AF21E2531B00C24FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BFD7AC29F619F22EA5D7FA /* Pods-TiendeoTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TiendeoTest;
+			};
+			name = Debug;
+		};
+		B21292B021E2531B00C24FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F79BB1E7C6CA3C74D23BE3 /* Pods-TiendeoTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L266L5RB52;
+				INFOPLIST_FILE = TiendeoTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jsolec.TiendeoTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TiendeoTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B212927B21E2531900C24FB4 /* Build configuration list for PBXProject "TiendeoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21292A621E2531B00C24FB4 /* Debug */,
+				B21292A721E2531B00C24FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B21292A821E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21292A921E2531B00C24FB4 /* Debug */,
+				B21292AA21E2531B00C24FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B21292AB21E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21292AC21E2531B00C24FB4 /* Debug */,
+				B21292AD21E2531B00C24FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B21292AE21E2531B00C24FB4 /* Build configuration list for PBXNativeTarget "TiendeoTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21292AF21E2531B00C24FB4 /* Debug */,
+				B21292B021E2531B00C24FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B212927821E2531900C24FB4 /* Project object */;
+}
