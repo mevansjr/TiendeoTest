@@ -12,6 +12,7 @@ import Foundation
 
 //MARK: Wireframe -
 protocol HomeWireframeProtocol: class {
+    func openStore(store: StoreModel)
 
 }
 //MARK: Presenter -
@@ -27,6 +28,8 @@ protocol HomePresenterProtocol: class {
     
     func getBusisness(indexPath: IndexPath) -> String?
     func getEndDate(indexPath: IndexPath) -> String?
+    
+    func goToStore(indexPath: IndexPath)
 }
 
 //MARK: Interactor -
@@ -48,6 +51,9 @@ protocol HomeInteractorProtocol: class {
     
     func getCatalogEndDate(index: Int) -> String?
     func getCouponEndDate(index: Int) -> String?
+    
+    func getCatalogStore(index: Int) -> StoreModel?
+    func getCouponStore(index: Int) -> StoreModel?
 }
 
 //MARK: View -
@@ -58,5 +64,5 @@ protocol HomeViewProtocol: class {
     func getOffers()
     func updateOffers()
     
-    func showError(error: Error)
+    func showError(error: String)
 }

@@ -39,7 +39,7 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func showError(error: Error) {
-        self.view?.showError(error: error)
+        self.view?.showError(error: error.localizedDescription)
     }
     
     func getBusisness(indexPath: IndexPath) -> String? {
@@ -50,5 +50,16 @@ class HomePresenter: HomePresenterProtocol {
     func getEndDate(indexPath: IndexPath) -> String? {
         return indexPath.section == 0 ? self.interactor?.getCatalogEndDate(index: indexPath.row)
             : self.interactor?.getCouponEndDate(index: indexPath.row)
+    }
+    
+    func goToStore(indexPath: IndexPath) {
+        let store = indexPath.section == 0 ? self.interactor?.getCatalogStore(index: indexPath.row)
+            : self.interactor?.getCouponStore(index: indexPath.row)
+        
+        if let nearestStore = store {
+            self.router.openStore(store: nearestStore)
+        } else {
+            self.view?.showError(error: ErrorMessage.noStore)
+        }
     }
 }

@@ -46,6 +46,10 @@ class HomeInteractor: HomeInteractorProtocol {
         self.presenter?.updateOffers()
     }
     
+    func showError(error: Error) {
+        self.presenter?.showError(error: error)
+    }
+    
     func getNumberOfCatalogs() -> Int? {
         return self.catalogs?.count
     }
@@ -78,7 +82,11 @@ class HomeInteractor: HomeInteractorProtocol {
         return nil
     }
     
-    func showError(error: Error) {
-        self.presenter?.showError(error: error)
+    func getCatalogStore(index: Int) -> StoreModel? {
+        return self.catalogs?[index].nearestStore
+    }
+    
+    func getCouponStore(index: Int) -> StoreModel? {
+        return self.coupons?[index].nearestStore
     }
 }

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  TiendeoTest
+
+  Created by Jesús Solé on 12/01/2019.
+  Copyright © 2019 JSolec. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "Necesitamos tu ubicación para ofrecerte la tienda más cerca a tu posición";

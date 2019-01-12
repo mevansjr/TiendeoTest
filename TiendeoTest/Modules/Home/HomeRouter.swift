@@ -30,4 +30,9 @@ class HomeRouter: HomeWireframeProtocol {
         
         return view
     }
+    
+    func openStore(store: StoreModel) {
+        let storeModule = StoreRouter.createModule(store: store)
+        self.viewController?.navigationController?.pushViewController(storeModule, animated: true)
+    }
 }

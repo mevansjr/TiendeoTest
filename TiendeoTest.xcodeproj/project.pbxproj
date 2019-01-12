@@ -14,6 +14,11 @@
 		B2116C1021EA513E00DAA0D4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0A21EA513E00DAA0D4 /* SplashViewController.swift */; };
 		B2116C1121EA513E00DAA0D4 /* SplashProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0B21EA513E00DAA0D4 /* SplashProtocols.swift */; };
 		B2116C1221EA513E00DAA0D4 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0C21EA513E00DAA0D4 /* SplashInteractor.swift */; };
+		B2116C2821EA5EEC00DAA0D4 /* StorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C2221EA5EEB00DAA0D4 /* StorePresenter.swift */; };
+		B2116C2921EA5EEC00DAA0D4 /* StoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C2321EA5EEB00DAA0D4 /* StoreRouter.swift */; };
+		B2116C2A21EA5EEC00DAA0D4 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C2421EA5EEB00DAA0D4 /* StoreViewController.swift */; };
+		B2116C2B21EA5EEC00DAA0D4 /* StoreProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C2521EA5EEB00DAA0D4 /* StoreProtocols.swift */; };
+		B2116C2C21EA5EEC00DAA0D4 /* StoreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C2621EA5EEB00DAA0D4 /* StoreInteractor.swift */; };
 		B212928421E2531900C24FB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B212928321E2531900C24FB4 /* AppDelegate.swift */; };
 		B212928B21E2531B00C24FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212928A21E2531B00C24FB4 /* Assets.xcassets */; };
 		B212928E21E2531B00C24FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212928C21E2531B00C24FB4 /* LaunchScreen.storyboard */; };
@@ -29,7 +34,7 @@
 		B21292CB21E2751100C24FB4 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */; };
 		B224BC4A21E54477007C72EB /* HomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224BC4921E54477007C72EB /* HomeCollectionReusableView.swift */; };
 		B224BC4D21E54863007C72EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B224BC4B21E54863007C72EB /* Localizable.strings */; };
-		B224BC4F21E548C1007C72EB /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224BC4E21E548C1007C72EB /* String+Localize.swift */; };
+		B224BC4F21E548C1007C72EB /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B224BC4E21E548C1007C72EB /* String+Utils.swift */; };
 		B22DED8721E93686006C3EED /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21292B621E254B800C24FB4 /* HomeProtocols.swift */; };
 		B22DED8921E93984006C3EED /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22DED8821E93984006C3EED /* Date+Format.swift */; };
 		B278A54E21E7E8D7008C1FC3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A54D21E7E8D7008C1FC3 /* API.swift */; };
@@ -38,6 +43,10 @@
 		B278A55521E7EAFA008C1FC3 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55421E7EAFA008C1FC3 /* StoreModel.swift */; };
 		B278A55721E7EBB6008C1FC3 /* CouponButtonsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55621E7EBB6008C1FC3 /* CouponButtonsModel.swift */; };
 		B278A55A21E7F7E3008C1FC3 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */; };
+		B2951D5621EA8ECC0008FCAE /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5521EA8ECC0008FCAE /* MapManager.swift */; };
+		B2951D5921EA8EEB0008FCAE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5821EA8EEB0008FCAE /* Utils.swift */; };
+		B2951D5B21EA8F160008FCAE /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5A21EA8F160008FCAE /* LocationHandler.swift */; };
+		B2951D5D21EA91850008FCAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2951D5C21EA91850008FCAE /* InfoPlist.strings */; };
 		B621ABE07F8D67BB1EC8D830 /* Pods_TiendeoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +79,11 @@
 		B2116C0A21EA513E00DAA0D4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B2116C0B21EA513E00DAA0D4 /* SplashProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProtocols.swift; sourceTree = "<group>"; };
 		B2116C0C21EA513E00DAA0D4 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		B2116C2221EA5EEB00DAA0D4 /* StorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePresenter.swift; sourceTree = "<group>"; };
+		B2116C2321EA5EEB00DAA0D4 /* StoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRouter.swift; sourceTree = "<group>"; };
+		B2116C2421EA5EEB00DAA0D4 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		B2116C2521EA5EEB00DAA0D4 /* StoreProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocols.swift; sourceTree = "<group>"; };
+		B2116C2621EA5EEB00DAA0D4 /* StoreInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInteractor.swift; sourceTree = "<group>"; };
 		B212928021E2531900C24FB4 /* TiendeoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiendeoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B212928321E2531900C24FB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B212928A21E2531B00C24FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +106,7 @@
 		B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		B224BC4921E54477007C72EB /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
 		B224BC4C21E54863007C72EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B224BC4E21E548C1007C72EB /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
+		B224BC4E21E548C1007C72EB /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		B22DED8821E93984006C3EED /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		B278A54D21E7E8D7008C1FC3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B278A55021E7E9F1008C1FC3 /* CouponModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponModel.swift; sourceTree = "<group>"; };
@@ -100,6 +114,10 @@
 		B278A55421E7EAFA008C1FC3 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		B278A55621E7EBB6008C1FC3 /* CouponButtonsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponButtonsModel.swift; sourceTree = "<group>"; };
 		B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
+		B2951D5521EA8ECC0008FCAE /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		B2951D5821EA8EEB0008FCAE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B2951D5A21EA8F160008FCAE /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		B2951D5C21EA91850008FCAE /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		B6BFD7AC29F619F22EA5D7FA /* Pods-TiendeoTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestUITests/Pods-TiendeoTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F53CBF5FFA7F9BA19839E9 /* Pods_TiendeoTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +176,18 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		B2116C2121EA5EDB00DAA0D4 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B2116C2221EA5EEB00DAA0D4 /* StorePresenter.swift */,
+				B2116C2321EA5EEB00DAA0D4 /* StoreRouter.swift */,
+				B2116C2421EA5EEB00DAA0D4 /* StoreViewController.swift */,
+				B2116C2521EA5EEB00DAA0D4 /* StoreProtocols.swift */,
+				B2116C2621EA5EEB00DAA0D4 /* StoreInteractor.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		B212927721E2531900C24FB4 = {
 			isa = PBXGroup;
 			children = (
@@ -183,13 +213,14 @@
 		B212928221E2531900C24FB4 /* TiendeoTest */ = {
 			isa = PBXGroup;
 			children = (
-				B278A55821E7F7D2008C1FC3 /* Managers */,
-				B21292C921E274FA00C24FB4 /* Extensions */,
 				B21292C421E2656300C24FB4 /* Cells */,
-				B224BC4821E5445A007C72EB /* SuplementaryViews */,
+				B21292C921E274FA00C24FB4 /* Extensions */,
+				B278A55821E7F7D2008C1FC3 /* Managers */,
 				B278A54F21E7E9D2008C1FC3 /* Model */,
 				B21292B121E2549200C24FB4 /* Modules */,
 				B278A54C21E7E8BD008C1FC3 /* Network */,
+				B224BC4821E5445A007C72EB /* SuplementaryViews */,
+				B2951D5721EA8EDC0008FCAE /* Utils */,
 				B212928321E2531900C24FB4 /* AppDelegate.swift */,
 				B21292C221E2560200C24FB4 /* Constants.swift */,
 				B212928A21E2531B00C24FB4 /* Assets.xcassets */,
@@ -197,6 +228,7 @@
 				B212928C21E2531B00C24FB4 /* LaunchScreen.storyboard */,
 				B212928F21E2531B00C24FB4 /* Info.plist */,
 				B224BC4B21E54863007C72EB /* Localizable.strings */,
+				B2951D5C21EA91850008FCAE /* InfoPlist.strings */,
 			);
 			path = TiendeoTest;
 			sourceTree = "<group>";
@@ -224,6 +256,7 @@
 			children = (
 				B2116C0721EA512000DAA0D4 /* Splash */,
 				B21292B221E254A500C24FB4 /* Home */,
+				B2116C2121EA5EDB00DAA0D4 /* Store */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -252,7 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				B21292CA21E2751100C24FB4 /* UIColor+Theme.swift */,
-				B224BC4E21E548C1007C72EB /* String+Localize.swift */,
+				B224BC4E21E548C1007C72EB /* String+Utils.swift */,
 				B22DED8821E93984006C3EED /* Date+Format.swift */,
 			);
 			path = Extensions;
@@ -289,8 +322,18 @@
 			isa = PBXGroup;
 			children = (
 				B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */,
+				B2951D5A21EA8F160008FCAE /* LocationHandler.swift */,
+				B2951D5521EA8ECC0008FCAE /* MapManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B2951D5721EA8EDC0008FCAE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2951D5821EA8EEB0008FCAE /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B2D6233E5E24E8A625DB4309 /* Frameworks */ = {
@@ -415,6 +458,7 @@
 				B224BC4D21E54863007C72EB /* Localizable.strings in Resources */,
 				B212928E21E2531B00C24FB4 /* LaunchScreen.storyboard in Resources */,
 				B212928B21E2531B00C24FB4 /* Assets.xcassets in Resources */,
+				B2951D5D21EA91850008FCAE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,17 +586,23 @@
 			files = (
 				B22DED8921E93984006C3EED /* Date+Format.swift in Sources */,
 				B212928421E2531900C24FB4 /* AppDelegate.swift in Sources */,
+				B2116C2B21EA5EEC00DAA0D4 /* StoreProtocols.swift in Sources */,
+				B2116C2921EA5EEC00DAA0D4 /* StoreRouter.swift in Sources */,
 				B2116C0E21EA513E00DAA0D4 /* SplashPresenter.swift in Sources */,
+				B2951D5921EA8EEB0008FCAE /* Utils.swift in Sources */,
 				B2116C1221EA513E00DAA0D4 /* SplashInteractor.swift in Sources */,
+				B2951D5B21EA8F160008FCAE /* LocationHandler.swift in Sources */,
 				B278A55721E7EBB6008C1FC3 /* CouponButtonsModel.swift in Sources */,
+				B2116C2A21EA5EEC00DAA0D4 /* StoreViewController.swift in Sources */,
 				B21292BA21E254B800C24FB4 /* HomeRouter.swift in Sources */,
 				B2116C0F21EA513E00DAA0D4 /* SplashRouter.swift in Sources */,
 				B21292CB21E2751100C24FB4 /* UIColor+Theme.swift in Sources */,
 				B224BC4A21E54477007C72EB /* HomeCollectionReusableView.swift in Sources */,
-				B224BC4F21E548C1007C72EB /* String+Localize.swift in Sources */,
+				B224BC4F21E548C1007C72EB /* String+Utils.swift in Sources */,
 				B278A55121E7E9F1008C1FC3 /* CouponModel.swift in Sources */,
 				B21292BD21E254B800C24FB4 /* HomeInteractor.swift in Sources */,
 				B21292C621E2657B00C24FB4 /* HomeCollectionViewCell.swift in Sources */,
+				B2116C2C21EA5EEC00DAA0D4 /* StoreInteractor.swift in Sources */,
 				B2116C1021EA513E00DAA0D4 /* SplashViewController.swift in Sources */,
 				B278A55A21E7F7E3008C1FC3 /* AlertsManager.swift in Sources */,
 				B21292C321E2560200C24FB4 /* Constants.swift in Sources */,
@@ -560,6 +610,8 @@
 				B278A55321E7EA1E008C1FC3 /* OfferModel.swift in Sources */,
 				B278A54E21E7E8D7008C1FC3 /* API.swift in Sources */,
 				B2116C1121EA513E00DAA0D4 /* SplashProtocols.swift in Sources */,
+				B2116C2821EA5EEC00DAA0D4 /* StorePresenter.swift in Sources */,
+				B2951D5621EA8ECC0008FCAE /* MapManager.swift in Sources */,
 				B21292BB21E254B800C24FB4 /* HomeViewController.swift in Sources */,
 				B22DED8721E93686006C3EED /* HomeProtocols.swift in Sources */,
 				B278A55521E7EAFA008C1FC3 /* StoreModel.swift in Sources */,

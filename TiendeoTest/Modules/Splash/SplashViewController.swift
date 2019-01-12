@@ -21,7 +21,7 @@ class SplashViewController: UIViewController, SplashViewProtocol {
         self.getOffers()
     }
     
-    func setupView() {
+    private func setupView() {
         
     }
     

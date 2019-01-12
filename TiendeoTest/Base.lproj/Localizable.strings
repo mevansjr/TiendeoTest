@@ -6,9 +6,18 @@
   Copyright © 2019 JSolec. All rights reserved.
 */
 
+//Home
 "kHomeNavigationTitle" = "Tiendeo";
 "kCatalogs" = "Catálogos";
 "kCoupons" = "Cupones";
 
+//Store
+"kStoreAddress" = "Dirección:";
+"kStoreWeb" = "Página web";
+"kStorePhone" = "Teléfono de contacto:";
+"kOpenMap" = "Abir Mapa";
+
+//Generic
 "kError" = "Error";
 "kOk" = "Aceptar";
+"kErrorNoStore" = "No hay ninguna tienda cercana disponible";

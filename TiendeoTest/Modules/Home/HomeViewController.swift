@@ -32,7 +32,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.setupView()
     }
 
-    func setupView() {
+    private func setupView() {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.mainRedColor
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white,
@@ -51,11 +51,11 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.collectionView.reloadData()
     }
     
-    func showError(error: Error) {
+    func showError(error: String) {
         self.stopRefresh()
         AlertsManager.showAlertMessage(controller: self,
                                        title: "kError".localize,
-                                       message: error.localizedDescription,
+                                       message: error,
                                        buttonString: "kOk".localize)
     }
     
@@ -113,7 +113,9 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter?.goToStore(indexPath: indexPath)
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {

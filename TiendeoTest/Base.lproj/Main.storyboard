@@ -332,8 +332,160 @@
             </objects>
             <point key="canvasLocation" x="134" y="-161"/>
         </scene>
+        <!--Store View Controller-->
+        <scene sceneID="WN6-Xa-eUr">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" id="6LH-fW-rQA" customClass="StoreViewController" customModule="TiendeoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NMf-Vt-RZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-9J-tBT" customClass="MKMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-Jl-GTF">
+                                <rect key="frame" x="0.0" y="20" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="QMs-qe-afj"/>
+                                    <constraint firstAttribute="height" constant="44" id="nhv-ZE-9bh"/>
+                                </constraints>
+                                <state key="normal" image="backArrow"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="6LH-fW-rQA" eventType="touchUpInside" id="oaE-NP-Yud"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-6f-YcS">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Body Shop" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8Q-Ei-gPa">
+                                        <rect key="frame" x="15" y="15" width="345" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njK-xJ-OAx">
+                                        <rect key="frame" x="15" y="66.5" width="345" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iq-48-i5c">
+                                        <rect key="frame" x="15" y="94.5" width="345" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inI-Yf-lI6">
+                                        <rect key="frame" x="15" y="215" width="345" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Contacto">
+                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="phoneTapped:" destination="6LH-fW-rQA" eventType="touchUpInside" id="xul-dn-3zS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ef-zK-Jjv">
+                                        <rect key="frame" x="15" y="151" width="345" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Visita su web">
+                                            <color key="titleColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="webTapped:" destination="6LH-fW-rQA" eventType="touchUpInside" id="9Mi-TO-lqA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Página web:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vy-bz-lTP">
+                                        <rect key="frame" x="15" y="132" width="345" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfono de contacto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-ir-kXZ">
+                                        <rect key="frame" x="15" y="196" width="345" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJU-GI-goE">
+                                        <rect key="frame" x="15" y="383" width="345" height="54"/>
+                                        <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="glT-g3-QHo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Abrir mapa">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mapTapped:" destination="6LH-fW-rQA" eventType="touchUpInside" id="Fcv-Z0-Bxb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4ef-zK-Jjv" firstAttribute="top" secondItem="1vy-bz-lTP" secondAttribute="bottom" constant="1" id="1JB-4V-uAB"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZJU-GI-goE" secondAttribute="bottom" constant="30" id="3nk-Oj-0N2"/>
+                                    <constraint firstItem="inI-Yf-lI6" firstAttribute="leading" secondItem="njK-xJ-OAx" secondAttribute="leading" id="3so-Xe-29O"/>
+                                    <constraint firstItem="njK-xJ-OAx" firstAttribute="top" secondItem="q8Q-Ei-gPa" secondAttribute="bottom" constant="25" id="5BP-yF-bpX"/>
+                                    <constraint firstItem="1vy-bz-lTP" firstAttribute="top" secondItem="7iq-48-i5c" secondAttribute="bottom" constant="20" id="6NI-L5-1XB"/>
+                                    <constraint firstItem="q8Q-Ei-gPa" firstAttribute="leading" secondItem="qtr-6f-YcS" secondAttribute="leading" constant="15" id="7g6-hL-8nu"/>
+                                    <constraint firstItem="lVq-ir-kXZ" firstAttribute="leading" secondItem="njK-xJ-OAx" secondAttribute="leading" id="B7y-G0-EcO"/>
+                                    <constraint firstItem="7iq-48-i5c" firstAttribute="leading" secondItem="njK-xJ-OAx" secondAttribute="leading" id="C9v-Gv-XdR"/>
+                                    <constraint firstItem="lVq-ir-kXZ" firstAttribute="trailing" secondItem="njK-xJ-OAx" secondAttribute="trailing" id="DvS-dK-Xpy"/>
+                                    <constraint firstItem="4ef-zK-Jjv" firstAttribute="leading" secondItem="q8Q-Ei-gPa" secondAttribute="leading" id="Ew8-jK-sqV"/>
+                                    <constraint firstItem="njK-xJ-OAx" firstAttribute="trailing" secondItem="q8Q-Ei-gPa" secondAttribute="trailing" id="Ito-Ed-omW"/>
+                                    <constraint firstItem="1vy-bz-lTP" firstAttribute="leading" secondItem="q8Q-Ei-gPa" secondAttribute="leading" id="OX7-mG-CR2"/>
+                                    <constraint firstItem="ZJU-GI-goE" firstAttribute="trailing" secondItem="q8Q-Ei-gPa" secondAttribute="trailing" id="RTZ-zQ-xZg"/>
+                                    <constraint firstAttribute="trailing" secondItem="q8Q-Ei-gPa" secondAttribute="trailing" constant="15" id="WYH-bz-MAL"/>
+                                    <constraint firstItem="7iq-48-i5c" firstAttribute="top" secondItem="njK-xJ-OAx" secondAttribute="bottom" constant="10" id="dGK-wb-mbR"/>
+                                    <constraint firstItem="4ef-zK-Jjv" firstAttribute="trailing" secondItem="q8Q-Ei-gPa" secondAttribute="trailing" id="eB7-Fv-vrv"/>
+                                    <constraint firstItem="lVq-ir-kXZ" firstAttribute="top" secondItem="4ef-zK-Jjv" secondAttribute="bottom" constant="15" id="idj-eh-lfb"/>
+                                    <constraint firstItem="inI-Yf-lI6" firstAttribute="trailing" secondItem="njK-xJ-OAx" secondAttribute="trailing" id="lim-hD-C6m"/>
+                                    <constraint firstItem="njK-xJ-OAx" firstAttribute="leading" secondItem="q8Q-Ei-gPa" secondAttribute="leading" id="m1k-ya-U5r"/>
+                                    <constraint firstItem="1vy-bz-lTP" firstAttribute="trailing" secondItem="q8Q-Ei-gPa" secondAttribute="trailing" id="mQB-HD-1oz"/>
+                                    <constraint firstItem="ZJU-GI-goE" firstAttribute="leading" secondItem="q8Q-Ei-gPa" secondAttribute="leading" id="nnx-s2-wMX"/>
+                                    <constraint firstItem="7iq-48-i5c" firstAttribute="trailing" secondItem="njK-xJ-OAx" secondAttribute="trailing" id="tc7-hA-v7p"/>
+                                    <constraint firstItem="inI-Yf-lI6" firstAttribute="top" secondItem="lVq-ir-kXZ" secondAttribute="bottom" constant="1" id="v6k-s6-TlG"/>
+                                    <constraint firstItem="q8Q-Ei-gPa" firstAttribute="top" secondItem="qtr-6f-YcS" secondAttribute="top" constant="15" id="vdC-o1-rrV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qtr-6f-YcS" firstAttribute="leading" secondItem="yyD-zQ-imC" secondAttribute="leading" id="25y-HU-Buk"/>
+                            <constraint firstItem="qtr-6f-YcS" firstAttribute="top" secondItem="bv7-9J-tBT" secondAttribute="bottom" id="4sn-Jn-I8k"/>
+                            <constraint firstItem="qtr-6f-YcS" firstAttribute="trailing" secondItem="yyD-zQ-imC" secondAttribute="trailing" id="Ken-N3-TOC"/>
+                            <constraint firstItem="l3I-Jl-GTF" firstAttribute="top" secondItem="yyD-zQ-imC" secondAttribute="top" id="Td4-Hy-9mO"/>
+                            <constraint firstItem="l3I-Jl-GTF" firstAttribute="leading" secondItem="yyD-zQ-imC" secondAttribute="leading" id="eYZ-R4-c6r"/>
+                            <constraint firstItem="bv7-9J-tBT" firstAttribute="top" secondItem="NMf-Vt-RZm" secondAttribute="top" id="f7R-lD-A25"/>
+                            <constraint firstItem="bv7-9J-tBT" firstAttribute="height" secondItem="NMf-Vt-RZm" secondAttribute="height" multiplier="0.3" id="jE8-G6-cwk"/>
+                            <constraint firstItem="bv7-9J-tBT" firstAttribute="trailing" secondItem="yyD-zQ-imC" secondAttribute="trailing" id="nOA-tn-cpV"/>
+                            <constraint firstItem="bv7-9J-tBT" firstAttribute="leading" secondItem="yyD-zQ-imC" secondAttribute="leading" id="ojn-yl-MtE"/>
+                            <constraint firstItem="yyD-zQ-imC" firstAttribute="bottom" secondItem="qtr-6f-YcS" secondAttribute="bottom" id="yRZ-Lt-fVf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yyD-zQ-imC"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="7iq-48-i5c" id="Prw-Qe-MAW"/>
+                        <outlet property="addressTitleLabel" destination="njK-xJ-OAx" id="YAd-zC-ybj"/>
+                        <outlet property="mapButton" destination="ZJU-GI-goE" id="0Ib-wu-YbO"/>
+                        <outlet property="mapView" destination="bv7-9J-tBT" id="vEo-71-BDv"/>
+                        <outlet property="nameLabel" destination="q8Q-Ei-gPa" id="8eW-I5-zRA"/>
+                        <outlet property="phoneButton" destination="inI-Yf-lI6" id="t2l-zk-cmr"/>
+                        <outlet property="phoneTitleLabel" destination="lVq-ir-kXZ" id="jPv-v0-sP8"/>
+                        <outlet property="webButton" destination="4ef-zK-Jjv" id="eGq-na-78y"/>
+                        <outlet property="webTitleLabel" destination="1vy-bz-lTP" id="Bje-gN-aoY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rg0-GQ-baX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-161.46926536731635"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backArrow" width="2000" height="2000"/>
         <image name="iconFavorites" width="50" height="50"/>
         <image name="iconSave" width="50" height="50"/>
         <image name="iconShare" width="50" height="50"/>
