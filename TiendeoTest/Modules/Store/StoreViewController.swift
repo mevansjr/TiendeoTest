@@ -35,7 +35,7 @@ class StoreViewController: UIViewController, StoreViewProtocol {
     }
     
     private func setupView() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.mapView.showsUserLocation = true
         self.mapView.isZoomEnabled = true
         
@@ -90,10 +90,13 @@ class StoreViewController: UIViewController, StoreViewProtocol {
     }
     
     @IBAction func mapTapped(_ sender: Any) {
+        MapManager.openAppleMapForPlace(route: true,
+                                        centerName: self.presenter?.getStoreName() ?? "",
+                                        location: self.presenter?.getStoreLocation() ?? CLLocationCoordinate2D())
     }
     
     @IBAction func backTapped(_ sender: Any) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.popViewController(animated: true)
     }
 }

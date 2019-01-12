@@ -20,4 +20,24 @@ class MapManager: NSObject {
             
         mapView.selectAnnotation(placeAnnotation, animated: true)
     }
+    
+    class func openAppleMapForPlace(route: Bool, centerName: String, location: CLLocationCoordinate2D) {
+        let regionDistance:CLLocationDistance = 100
+        let regionSpan = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionDistance,
+                                            longitudinalMeters: regionDistance)
+        var options: [String : Any] = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+                                       MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        if route {
+            if #available(iOS 10.0, *) {
+                options[MKLaunchOptionsDirectionsModeKey] = MKLaunchOptionsDirectionsModeDefault
+            } else {
+                options[MKLaunchOptionsDirectionsModeKey] = MKLaunchOptionsDirectionsModeDriving
+            }
+        }
+        let placemark = MKPlacemark(coordinate: location, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = centerName
+        mapItem.openInMaps(launchOptions: options)
+    }
 }

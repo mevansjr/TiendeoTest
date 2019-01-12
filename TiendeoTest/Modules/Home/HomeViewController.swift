@@ -31,6 +31,10 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         self.setupView()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     private func setupView() {
         self.navigationController?.navigationBar.isTranslucent = false
