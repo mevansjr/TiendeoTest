@@ -9,7 +9,8 @@
 import UIKit
 
 struct Controllers {
-    static let Home = "HomeViewController"
+    static let Home             = "HomeViewController"
+    static let Splash           = "SplashViewController"
 }
 
 struct Cells {

@@ -18,12 +18,18 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     let spaceBetweenCells: CGFloat = 10
     let catalogHeight: CGFloat = 300
     let couponHeight: CGFloat = 250
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh), for: .valueChanged)
+        
+        return refreshControl
+    }()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupView()
-        self.getOffers()
     }
 
     func setupView() {
@@ -32,6 +38,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white,
                                                                         .font : Fonts.navigationFont!]
         self.navigationItem.title = "kHomeNavigationTitle".localize.uppercased()
+        self.collectionView.addSubview(self.refreshControl)
+        self.collectionView.reloadData()
     }
     
     func getOffers() {
@@ -39,14 +47,24 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     func updateOffers() {
+        self.stopRefresh()
         self.collectionView.reloadData()
     }
     
     func showError(error: Error) {
+        self.stopRefresh()
         AlertsManager.showAlertMessage(controller: self,
                                        title: "kError".localize,
                                        message: error.localizedDescription,
                                        buttonString: "kOk".localize)
+    }
+    
+    @objc func handleRefresh() {
+        self.getOffers()
+    }
+    
+    func stopRefresh() {
+        self.refreshControl.endRefreshing()
     }
 }
 
@@ -95,7 +113,7 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+        
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {

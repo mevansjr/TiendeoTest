@@ -17,11 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let homeModule = HomeRouter.createModule()
-        let navigationController = UINavigationController(rootViewController: homeModule)
+        let splashModule = SplashRouter.createModule()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = splashModule
         window?.makeKeyAndVisible()
         return true
     }

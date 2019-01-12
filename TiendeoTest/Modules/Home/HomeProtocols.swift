@@ -19,7 +19,9 @@ protocol HomePresenterProtocol: class {
     
     func getOffers()
     func updateOffers()
+    
     func showError(error: Error)
+    
     func getNumberOfElements(section: Int) -> Int?
     func getTitle(section: Int) -> String
     
@@ -33,8 +35,11 @@ protocol HomeInteractorProtocol: class {
     var presenter: HomePresenterProtocol?  { get set }
     
     func getOffers()
+    func setOffers(offers: [OfferModel])
     func updateOffers(offers: [OfferModel])
+    
     func showError(error: Error)
+    
     func getNumberOfCatalogs() -> Int?
     func getNumberOfCoupons() -> Int?
     
@@ -52,5 +57,6 @@ protocol HomeViewProtocol: class {
     
     func getOffers()
     func updateOffers()
+    
     func showError(error: Error)
 }

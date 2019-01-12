@@ -25,18 +25,9 @@ class HomeInteractor: HomeInteractorProtocol {
                                    onDisposed: nil)
     }
     
-    func updateOffers(offers: [OfferModel]) {
-        if let _ = self.catalogs {
-            self.catalogs?.removeAll()
-        } else {
-            self.catalogs = [OfferModel]()
-        }
-        
-        if let _ = self.coupons {
-            self.coupons?.removeAll()
-        } else {
-            self.coupons = [OfferModel]()
-        }
+    func setOffers(offers: [OfferModel]) {
+        self.catalogs = [OfferModel]()
+        self.coupons = [OfferModel]()
         
         for offer in offers {
             if let _ = offer.coupon {
@@ -45,6 +36,13 @@ class HomeInteractor: HomeInteractorProtocol {
                 self.catalogs?.append(offer)
             }
         }
+    }
+    
+    func updateOffers(offers: [OfferModel]) {
+        self.catalogs?.removeAll()
+        self.coupons?.removeAll()
+        
+        self.setOffers(offers: offers)
         self.presenter?.updateOffers()
     }
     
