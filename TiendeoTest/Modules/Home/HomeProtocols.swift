@@ -30,9 +30,14 @@ protocol HomePresenterProtocol: class {
     func getBusisness(indexPath: IndexPath) -> String?
     func getEndDate(indexPath: IndexPath) -> String?
     
+    func getShareText(indexPath: IndexPath) -> String
+    
     func goToStore(indexPath: IndexPath)
     
     func getNumberOfItemsPerRow() -> CGFloat
+    
+    func isElementFavourite(indexPath: IndexPath) -> Bool
+    func elementFavouriteAction(indexPath: IndexPath)
 }
 
 //MARK: Interactor -
@@ -57,6 +62,12 @@ protocol HomeInteractorProtocol: class {
     
     func getCatalogStore(index: Int) -> StoreModel?
     func getCouponStore(index: Int) -> StoreModel?
+    
+    func isCatalogFavourite(index: Int) -> Bool
+    func isCouponFavourite(index: Int) -> Bool
+    
+    func catalogFavouriteAction(index: Int)
+    func couponFavouriteAction(index: Int)
 }
 
 //MARK: View -

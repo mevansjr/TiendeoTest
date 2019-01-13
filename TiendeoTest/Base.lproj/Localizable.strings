@@ -10,6 +10,8 @@
 "kHomeNavigationTitle" = "Tiendeo";
 "kCatalogs" = "Catálogos";
 "kCoupons" = "Cupones";
+"kShareCatalog" = "Mira este catalogo, te va a gustar! Es de %@ y tenemos hasta %@";
+"kShareCoupon" = "Tengo este cupón, vamos a usarlo! Es de %@ y tenemos hasta %@";
 
 //Store
 "kStoreAddress" = "Dirección:";

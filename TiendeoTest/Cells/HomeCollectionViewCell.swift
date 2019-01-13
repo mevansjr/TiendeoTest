@@ -11,7 +11,7 @@ import UIKit
 protocol HomeCollectionViewCellDelegate {
     func favouriteTapped(indexPath: IndexPath)
     func saveTapped(indexPath: IndexPath)
-    func shareTapped(indexPath: IndexPath)
+    func shareTapped(indexPath: IndexPath, view: UIView)
 }
 
 class HomeCollectionViewCell: UICollectionViewCell {
@@ -27,9 +27,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     func configureCell(busisnessName: String,
                        endDate: String,
+                       isFavourite: Bool,
                        indexPath: IndexPath,
                        delegate: HomeCollectionViewCellDelegate) {
         
+        self.favouriteButton.isSelected = isFavourite
         self.indexPath = indexPath
         self.delegate = delegate
         
@@ -45,6 +47,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func favouriteTapped(_ sender: Any) {
+        self.favouriteButton.isSelected = !self.favouriteButton.isSelected
         self.delegate.favouriteTapped(indexPath: self.indexPath)
     }
     
@@ -52,7 +55,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.delegate.saveTapped(indexPath: self.indexPath)
     }
     
-    @IBAction func shareTapped(_ sender: Any) {
-        self.delegate.shareTapped(indexPath: self.indexPath)
+    @IBAction func shareTapped(_ sender: UIButton) {
+        self.delegate.shareTapped(indexPath: self.indexPath, view: sender)
     }
 }

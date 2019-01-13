@@ -52,6 +52,20 @@ class HomePresenter: HomePresenterProtocol {
             : self.interactor?.getCouponEndDate(index: indexPath.row)
     }
     
+    func getShareText(indexPath: IndexPath) -> String {
+        var shareText = ""
+        if indexPath.section == 0 {
+            shareText = String(format: "kShareCatalog".localize,
+                               self.interactor?.getCatalogBusisness(index: indexPath.row) ?? "",
+                               self.interactor?.getCatalogEndDate(index: indexPath.row) ?? "")
+        } else {
+            shareText = String(format: "kShareCoupon".localize,
+                               self.interactor?.getCouponBusisness(index: indexPath.row) ?? "",
+                               self.interactor?.getCouponEndDate(index: indexPath.row) ?? "")
+        }
+        return shareText
+    }
+    
     func goToStore(indexPath: IndexPath) {
         let store = indexPath.section == 0 ? self.interactor?.getCatalogStore(index: indexPath.row)
             : self.interactor?.getCouponStore(index: indexPath.row)
@@ -72,5 +86,20 @@ class HomePresenter: HomePresenterProtocol {
             return 4
         }
         return 2
+    }
+    
+    func isElementFavourite(indexPath: IndexPath) -> Bool {
+        if indexPath.section == 0 {
+            return self.interactor?.isCatalogFavourite(index: indexPath.row) ?? false
+        }
+        return self.interactor?.isCouponFavourite(index: indexPath.row) ?? false
+    }
+    
+    func elementFavouriteAction(indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            self.interactor?.catalogFavouriteAction(index: indexPath.row)
+        } else {
+            self.interactor?.couponFavouriteAction(index: indexPath.row)
+        }
     }
 }

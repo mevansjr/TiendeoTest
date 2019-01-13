@@ -89,4 +89,38 @@ class HomeInteractor: HomeInteractorProtocol {
     func getCouponStore(index: Int) -> StoreModel? {
         return self.coupons?[index].nearestStore
     }
+    
+    func isCatalogFavourite(index: Int) -> Bool {
+        if let id = self.catalogs?[index].catalogId {
+            return UserDefaultsManager.isFavourite(id: id)
+        }
+        return false
+    }
+    
+    func isCouponFavourite(index: Int) -> Bool {
+        if let id = self.coupons?[index].catalogId {
+            return UserDefaultsManager.isFavourite(id: id)
+        }
+        return false
+    }
+    
+    func catalogFavouriteAction(index: Int) {
+        if let id = self.catalogs?[index].catalogId {
+            if self.isCatalogFavourite(index: index) {
+                UserDefaultsManager.removeFavourite(id: id)
+            } else {
+                UserDefaultsManager.saveFavourite(id: id)
+            }
+        }
+    }
+    
+    func couponFavouriteAction(index: Int) {
+        if let id = self.coupons?[index].catalogId {
+            if self.isCouponFavourite(index: index) {
+                UserDefaultsManager.removeFavourite(id: id)
+            } else {
+                UserDefaultsManager.saveFavourite(id: id)
+            }
+        }
+    }
 }

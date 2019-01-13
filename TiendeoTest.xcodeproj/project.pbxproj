@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		327AFFAEC4C9712E0E2456D8 /* Pods_TiendeoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AB1B71F9BBEA5341245D1E /* Pods_TiendeoTest.framework */; };
 		3BB812463C67FEE7F8F39A5A /* Pods_TiendeoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F53CBF5FFA7F9BA19839E9 /* Pods_TiendeoTestTests.framework */; };
+		B20FF46821EB5C53000B2549 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FF46721EB5C53000B2549 /* UserDefaultsManager.swift */; };
 		B2116C0E21EA513E00DAA0D4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0821EA513E00DAA0D4 /* SplashPresenter.swift */; };
 		B2116C0F21EA513E00DAA0D4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0921EA513E00DAA0D4 /* SplashRouter.swift */; };
 		B2116C1021EA513E00DAA0D4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2116C0A21EA513E00DAA0D4 /* SplashViewController.swift */; };
@@ -74,6 +75,7 @@
 		7AFC440105D758B1BE0A4729 /* Pods-TiendeoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestTests/Pods-TiendeoTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		890E6A7DF345861EA7B7D20D /* Pods-TiendeoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTest/Pods-TiendeoTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A8AB1B71F9BBEA5341245D1E /* Pods_TiendeoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20FF46721EB5C53000B2549 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		B2116C0821EA513E00DAA0D4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		B2116C0921EA513E00DAA0D4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		B2116C0A21EA513E00DAA0D4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */,
 				B2951D5A21EA8F160008FCAE /* LocationHandler.swift */,
 				B2951D5521EA8ECC0008FCAE /* MapManager.swift */,
+				B20FF46721EB5C53000B2549 /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				B212928421E2531900C24FB4 /* AppDelegate.swift in Sources */,
 				B2116C2B21EA5EEC00DAA0D4 /* StoreProtocols.swift in Sources */,
 				B2116C2921EA5EEC00DAA0D4 /* StoreRouter.swift in Sources */,
+				B20FF46821EB5C53000B2549 /* UserDefaultsManager.swift in Sources */,
 				B2116C0E21EA513E00DAA0D4 /* SplashPresenter.swift in Sources */,
 				B2951D5921EA8EEB0008FCAE /* Utils.swift in Sources */,
 				B2116C1221EA513E00DAA0D4 /* SplashInteractor.swift in Sources */,

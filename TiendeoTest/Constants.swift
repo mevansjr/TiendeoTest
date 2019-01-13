@@ -35,3 +35,7 @@ struct Network {
 struct ErrorMessage {
     static let noStore          = "kErrorNoStore".localize
 }
+
+struct UserDefaultsKey {
+    static let favourites       = "favourite-"
+}

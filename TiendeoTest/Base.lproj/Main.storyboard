@@ -71,6 +71,7 @@
                                                         <constraint firstAttribute="width" secondItem="Vcc-cy-0EM" secondAttribute="height" multiplier="1:1" id="8BY-zx-n0S"/>
                                                     </constraints>
                                                     <state key="normal" image="iconFavorites"/>
+                                                    <state key="selected" image="iconFavoritesSelected"/>
                                                     <connections>
                                                         <action selector="favouriteTapped:" destination="BEl-eD-05S" eventType="touchUpInside" id="887-aG-ddv"/>
                                                     </connections>
@@ -175,6 +176,7 @@
                                                         <constraint firstAttribute="width" secondItem="Mj8-mC-wO6" secondAttribute="height" multiplier="1:1" id="GK1-aD-Frl"/>
                                                     </constraints>
                                                     <state key="normal" image="iconFavorites"/>
+                                                    <state key="selected" image="iconFavoritesSelected"/>
                                                     <connections>
                                                         <action selector="favouriteTapped:" destination="uAy-Pm-ixm" eventType="touchUpInside" id="ZFq-Mw-2mx"/>
                                                     </connections>
@@ -522,6 +524,7 @@
     <resources>
         <image name="backArrow" width="2000" height="2000"/>
         <image name="iconFavorites" width="50" height="50"/>
+        <image name="iconFavoritesSelected" width="30" height="30"/>
         <image name="iconSave" width="50" height="50"/>
         <image name="iconShare" width="50" height="50"/>
         <image name="imageCatalog" width="221.75999450683594" height="255.36000061035156"/>

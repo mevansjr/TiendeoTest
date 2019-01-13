@@ -89,15 +89,17 @@ class HomeViewController: UIViewController, HomeViewProtocol {
 
 extension HomeViewController: HomeCollectionViewCellDelegate {
     func favouriteTapped(indexPath: IndexPath) {
-        
+        self.presenter?.elementFavouriteAction(indexPath: indexPath)
     }
     
     func saveTapped(indexPath: IndexPath) {
         
     }
     
-    func shareTapped(indexPath: IndexPath) {
-        
+    func shareTapped(indexPath: IndexPath, view: UIView) {
+        Utils.share(controller: self,
+                    sender: view,
+                    items: [self.presenter?.getShareText(indexPath: indexPath) ?? ""])
     }
 }
 
@@ -112,10 +114,13 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = indexPath.section == 0 ? Cells.Catalog : Cells.Coupon
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
                                                       for: indexPath) as! HomeCollectionViewCell
+        
         cell.configureCell(busisnessName: self.presenter?.getBusisness(indexPath: indexPath) ?? "",
                            endDate: self.presenter?.getEndDate(indexPath: indexPath) ?? "",
+                           isFavourite: self.presenter?.isElementFavourite(indexPath: indexPath) ?? false,
                            indexPath: indexPath,
                            delegate: self)
         return cell

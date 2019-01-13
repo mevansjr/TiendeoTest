@@ -23,4 +23,15 @@ class Utils: NSObject {
             }
         }
     }
+    
+    class func share(controller: UIViewController, sender: UIView, items: [Any]) {
+        let activityViewController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        if let wPPC = activityViewController.popoverPresentationController {
+            wPPC.sourceView = sender
+        }
+        activityViewController.setValue("Cita médica", forKey: "Subject")
+        
+        activityViewController.excludedActivityTypes = [.postToVimeo, .postToFlickr, .postToWeibo, .postToTencentWeibo]
+        controller.present(activityViewController, animated: true, completion: nil)
+    }
 }
