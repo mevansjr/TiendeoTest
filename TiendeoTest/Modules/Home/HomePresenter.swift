@@ -62,4 +62,15 @@ class HomePresenter: HomePresenterProtocol {
             self.view?.showError(error: ErrorMessage.noStore)
         }
     }
+    
+    func getNumberOfItemsPerRow() -> CGFloat {
+        if UI_USER_INTERFACE_IDIOM() == .phone {
+            return 2
+        } else if UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .portraitUpsideDown {
+            return 3
+        } else if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            return 4
+        }
+        return 2
+    }
 }

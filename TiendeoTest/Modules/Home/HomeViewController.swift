@@ -16,8 +16,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     var presenter: HomePresenterProtocol?
     let spaceBetweenCells: CGFloat = 10
-    let catalogHeight: CGFloat = 300
-    let couponHeight: CGFloat = 250
+    let catalogAspectRatio: CGFloat = 300/185
+    let couponAspectRatio: CGFloat = 250/185
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -35,6 +35,11 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.collectionView.reloadData()
+    }
 
     private func setupView() {
         self.navigationController?.navigationBar.isTranslucent = false
@@ -44,6 +49,12 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.navigationItem.title = "kHomeNavigationTitle".localize.uppercased()
         self.collectionView.addSubview(self.refreshControl)
         self.collectionView.reloadData()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.reloadData),
+                                               name: UIDevice.orientationDidChangeNotification,
+                                               object: nil)
+
     }
     
     func getOffers() {
@@ -65,6 +76,10 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     @objc func handleRefresh() {
         self.getOffers()
+    }
+    
+    @objc func reloadData() {
+        self.collectionView.reloadData()
     }
     
     func stopRefresh() {
@@ -125,10 +140,11 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
+        let numberOfCells = self.presenter?.getNumberOfItemsPerRow() ?? 0
         let screenBounds = UIScreen.main.bounds
-        let width = (screenBounds.width - self.spaceBetweenCells * 3.0) / 2.0
-        let height = indexPath.section == 0 ? self.catalogHeight : self.couponHeight
+        let width = (screenBounds.width - self.spaceBetweenCells * (numberOfCells + 1)) / numberOfCells
+        let aspectRatio = indexPath.section == 0 ? self.catalogAspectRatio : self.couponAspectRatio
         
-        return CGSize(width: width, height: height)
+        return CGSize(width: width, height: width * aspectRatio)
     }
 }
