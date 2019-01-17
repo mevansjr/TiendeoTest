@@ -45,6 +45,8 @@ protocol HomeInteractorProtocol: class {
 
     var presenter: HomePresenterProtocol?  { get set }
     
+    func setAPI(api: API)
+    
     func getOffers()
     func setOffers(offers: [OfferModel])
     func updateOffers(offers: [OfferModel])

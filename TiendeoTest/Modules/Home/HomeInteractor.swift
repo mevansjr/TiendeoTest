@@ -14,11 +14,16 @@ class HomeInteractor: HomeInteractorProtocol {
 
     weak var presenter: HomePresenterProtocol?
     
+    private var api: API!
     private var catalogs: [OfferModel]?
     private var coupons: [OfferModel]?
     
+    func setAPI(api: API) {
+        self.api = api
+    }
+    
     func getOffers() {
-        let observer = API.manager.getOffers()
+        let observer = self.api.getOffers()
         let _ = observer.subscribe(onNext: updateOffers,
                                    onError: showError,
                                    onCompleted: nil,

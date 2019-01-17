@@ -23,6 +23,8 @@ class StoreViewController: UIViewController, StoreViewProtocol {
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var mapButton: UIButton!
     
+    private var locationManager = LocationManager()
+    
     var presenter: StorePresenterProtocol?
 
 	override func viewDidLoad() {
@@ -61,9 +63,10 @@ class StoreViewController: UIViewController, StoreViewProtocol {
     }
     
     private func requestPermission() {
-        LocationHandler.manager.delegate = self
-        LocationHandler.manager.requestPermission()
-        LocationHandler.manager.startUpdatingLocation()
+        self.locationManager.loadLocationManager()
+        self.locationManager.delegate = self
+        self.locationManager.requestPermission()
+        self.locationManager.startUpdatingLocation()
     }
     
     private func addStorePin() {
@@ -101,7 +104,7 @@ class StoreViewController: UIViewController, StoreViewProtocol {
     }
 }
 
-extension StoreViewController: LocationHandlerDelegate {
+extension StoreViewController: LocationManagerDelegate {
     func locationAuthorized() {
         print("Location Authorized")
     }

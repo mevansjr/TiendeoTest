@@ -13,8 +13,6 @@ import AlamofireObjectMapper
 
 class API: NSObject {
     
-    static let manager = API()
-    
     func getOffers() -> Observable<[OfferModel]> {
         
         return Observable.create({ observer -> Disposable in

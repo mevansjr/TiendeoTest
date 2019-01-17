@@ -14,9 +14,10 @@ import RxSwift
 class SplashInteractor: SplashInteractorProtocol {
 
     weak var presenter: SplashPresenterProtocol?
+    let api = API()
     
     func getOffers() {
-        let observer = API.manager.getOffers()
+        let observer = self.api.getOffers()
         let _ = observer.subscribe(onNext: updateOffers,
                                    onError: showError,
                                    onCompleted: nil,
@@ -24,7 +25,7 @@ class SplashInteractor: SplashInteractorProtocol {
     }
     
     func updateOffers(offers: [OfferModel]) {
-        self.presenter?.goToHome(offers: offers)
+        self.presenter?.goToHome(offers: offers, api: self.api)
     }
     
     func showError(error: Error) {

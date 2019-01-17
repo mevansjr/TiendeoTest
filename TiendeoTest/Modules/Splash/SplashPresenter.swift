@@ -26,8 +26,8 @@ class SplashPresenter: SplashPresenterProtocol {
         self.interactor?.getOffers()
     }
     
-    func goToHome(offers: [OfferModel]) {
-        self.router.openHome(offers: offers)
+    func goToHome(offers: [OfferModel], api: API) {
+        self.router.openHome(offers: offers, api: api)
     }
     
     func showError(error: Error) {

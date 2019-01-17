@@ -1,5 +1,5 @@
 //
-//  LocationHandler.swift
+//  LocationManager.swift
 //  TiendeoTest
 //
 //  Created by Jesús Solé on 12/01/2019.
@@ -9,22 +9,15 @@
 import UIKit
 import CoreLocation
 
-protocol LocationHandlerDelegate {
+protocol LocationManagerDelegate {
     func locationAuthorized()
     func locationNotAuthorized()
 }
 
-class LocationHandler: NSObject {
+class LocationManager: NSObject {
     
     var locationManager: CLLocationManager!
-    var delegate: LocationHandlerDelegate?
-    
-    static let manager: LocationHandler = {
-        let instance = LocationHandler()
-        instance.loadLocationManager()
-        instance.startUpdatingLocation()
-        return instance
-    }()
+    var delegate: LocationManagerDelegate?
     
     func loadLocationManager() {
         
@@ -60,7 +53,7 @@ class LocationHandler: NSObject {
     }
 }
 
-extension LocationHandler: CLLocationManagerDelegate {
+extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locationManager.stopUpdatingLocation()

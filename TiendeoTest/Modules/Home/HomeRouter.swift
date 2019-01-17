@@ -14,7 +14,7 @@ class HomeRouter: HomeWireframeProtocol {
     
     weak var viewController: UIViewController?
     
-    static func createModule(offers: [OfferModel]) -> UIViewController {
+    static func createModule(offers: [OfferModel], api: API) -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: Controllers.Home) as! HomeViewController
@@ -26,6 +26,7 @@ class HomeRouter: HomeWireframeProtocol {
         interactor.presenter = presenter
         router.viewController = view
         
+        interactor.setAPI(api: api)
         interactor.setOffers(offers: offers)
         
         return view

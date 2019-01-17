@@ -12,14 +12,14 @@ import Foundation
 
 //MARK: Wireframe -
 protocol SplashWireframeProtocol: class {
-    func openHome(offers: [OfferModel])
+    func openHome(offers: [OfferModel], api: API)
 
 }
 //MARK: Presenter -
 protocol SplashPresenterProtocol: class {
     func getOffers()
     func showError(error: Error)
-    func goToHome(offers: [OfferModel])
+    func goToHome(offers: [OfferModel], api: API)
 }
 
 //MARK: Interactor -

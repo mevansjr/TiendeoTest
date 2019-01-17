@@ -46,7 +46,7 @@
 		B278A55A21E7F7E3008C1FC3 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */; };
 		B2951D5621EA8ECC0008FCAE /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5521EA8ECC0008FCAE /* MapManager.swift */; };
 		B2951D5921EA8EEB0008FCAE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5821EA8EEB0008FCAE /* Utils.swift */; };
-		B2951D5B21EA8F160008FCAE /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5A21EA8F160008FCAE /* LocationHandler.swift */; };
+		B2951D5B21EA8F160008FCAE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2951D5A21EA8F160008FCAE /* LocationManager.swift */; };
 		B2951D5D21EA91850008FCAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2951D5C21EA91850008FCAE /* InfoPlist.strings */; };
 		B621ABE07F8D67BB1EC8D830 /* Pods_TiendeoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -118,7 +118,7 @@
 		B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		B2951D5521EA8ECC0008FCAE /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		B2951D5821EA8EEB0008FCAE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		B2951D5A21EA8F160008FCAE /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		B2951D5A21EA8F160008FCAE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B2951D5C21EA91850008FCAE /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		B6BFD7AC29F619F22EA5D7FA /* Pods-TiendeoTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiendeoTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiendeoTestUITests/Pods-TiendeoTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAD58AA4D8857DAE5F6F7F30 /* Pods_TiendeoTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiendeoTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				B278A55921E7F7E3008C1FC3 /* AlertsManager.swift */,
-				B2951D5A21EA8F160008FCAE /* LocationHandler.swift */,
+				B2951D5A21EA8F160008FCAE /* LocationManager.swift */,
 				B2951D5521EA8ECC0008FCAE /* MapManager.swift */,
 				B20FF46721EB5C53000B2549 /* UserDefaultsManager.swift */,
 			);
@@ -595,7 +595,7 @@
 				B2116C0E21EA513E00DAA0D4 /* SplashPresenter.swift in Sources */,
 				B2951D5921EA8EEB0008FCAE /* Utils.swift in Sources */,
 				B2116C1221EA513E00DAA0D4 /* SplashInteractor.swift in Sources */,
-				B2951D5B21EA8F160008FCAE /* LocationHandler.swift in Sources */,
+				B2951D5B21EA8F160008FCAE /* LocationManager.swift in Sources */,
 				B278A55721E7EBB6008C1FC3 /* CouponButtonsModel.swift in Sources */,
 				B2116C2A21EA5EEC00DAA0D4 /* StoreViewController.swift in Sources */,
 				B21292BA21E254B800C24FB4 /* HomeRouter.swift in Sources */,

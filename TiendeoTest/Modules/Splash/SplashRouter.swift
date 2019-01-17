@@ -29,8 +29,8 @@ class SplashRouter: SplashWireframeProtocol {
         return view
     }
     
-    func openHome(offers: [OfferModel]) {
-        let homeModule = HomeRouter.createModule(offers: offers)
+    func openHome(offers: [OfferModel], api: API) {
+        let homeModule = HomeRouter.createModule(offers: offers, api: api)
         let navigationController = UINavigationController(rootViewController: homeModule)
         self.viewController?.present(navigationController, animated: true, completion: nil)
     }
